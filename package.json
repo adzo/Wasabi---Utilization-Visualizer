@@ -1,0 +1,25 @@
+{
+  "name": "utilization-visualizer",
+  "version": "1.0.0",
+  "description": "A cross platform desktop application that displays charts of your utilization",
+  "main": "main.js",
+  "productName": "Wasabi - Utilization visualizer",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/assets/icons/wasabi.icns --prune=true --out=../release-builds/UtilizationVisualizer/mac",
+    "package-win": "electron-packager . wasabi-utilization-visualizer --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/assets/icons/wasabi.ico --prune=true --out=../release-builds/UtilizationVisualizer/windows --version-string.CompanyName=Wasabi --version-string.FileDescription=CE --version-string.ProductName=\"Wasabi Utilization Visualizer\"",
+    "package-linux": "electron-packager . wasabi-utilization-visualizer --overwrite --asar=true --platform=linux --arch=x64 --icon=src/assets/icons/wasabi.png --prune=true --out=../release-builds/UtilizationVisualizer/linux"
+  },
+  "repository": "https://github.com/adzo/Wasabi.ConnectivityTest",
+  "keywords": [],
+  "author": "Adzo",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.4",
+    "electron-packager": "^15.5.1",
+    "tailwindcss": "^3.1.2"
+  },
+  "dependencies": {
+    "electron-store": "^8.0.2"
+  }
+}
